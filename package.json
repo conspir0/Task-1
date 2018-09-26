@@ -1,7 +1,7 @@
 {
-  "name": "Task AWWW",
+  "name": "Task-1",
   "version": "1.0.0",
-  "description": "https://conspir0.github.io/learning-git-2/",
+  "description": "https://conspir0.github.io/Task-1/",
   "main": "index.js",
   "scripts": {
     "test": "npm-run-all test:*",
@@ -13,7 +13,7 @@
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf *.css",
     "build:sass": "node-sass --output-style compact -o css sass",
-    "build:autoprefixer": "autoprefixer-cli css/*.css",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
     "watch:browser-sync": "node_modules/.bin/browser-sync start --server --files css/*.css *.html",
@@ -23,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conspir0/learning-git-2.git"
+    "url": "git+https://github.com/conspir0/Task-1.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/conspir0/learning-git-2/issues"
+    "url": "https://github.com/conspir0/Task-1/issues"
   },
-  "homepage": "https://github.com/conspir0/learning-git-2#readme",
+  "homepage": "https://github.com/conspir0/Task-1#readme",
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.24.4",

@@ -1,0 +1,104 @@
+// Widescreens
+@include mediaXl {
+
+}
+
+// Desktops & laptops
+@include mediaLg {
+    body {
+        h1 {
+            font-size: 3rem;;
+        }
+        p, button {
+            font-size: 1.1rem;
+        }
+    }
+    header {
+        .menu {
+            .menu__logo {
+                height: 1.5rem;
+            }
+            
+            .menu__nav .menu__nav__item {
+                font-size: 0.8rem;
+                margin: 0 0.3rem;
+                
+                .menu__nav__item__link {
+                    padding: 0.7rem;
+                }
+            }
+        }
+        
+        .content {
+            .content__box .content__box__btn {
+                margin-top: 2.5rem;
+            
+                .btn {
+                    padding: 0.5rem 1rem;
+                }
+            }
+           .content__brand .content__brand__img {
+               height: 2.5rem;
+            }
+        }
+    }
+}
+
+
+// Tablets & small laptops
+@include mediaMd {
+    body {
+        h1 {
+            font-size: 200%;
+        }
+        p, button {
+            font-size: 50%;
+        }
+    }
+    header {
+        .menu {
+            .menu__logo {
+                height: .6rem;
+            }
+            
+            .menu__nav .menu__nav__item {
+                font-size: 0.4rem;
+                margin: 0 0.3rem;
+                
+                .menu__nav__item__link {
+                    padding: 0.2rem;
+                }
+            }
+        }
+        
+        .content {
+            .content__box{
+                margin: auto;
+                text-align: center;
+
+                .content__box__btn {
+                    margin: auto;
+                    margin-top: 1.5rem;
+
+                    .btn {
+                        padding: 0.25rem .5rem;
+                        margin: 0.5rem;
+                    }
+                }
+            }
+            
+            .content__brand {
+                margin: 1.5rem 0;
+                    
+                .content__brand__img {
+                    height: 5vh;
+                }
+            }
+        }
+    }
+}
+
+// Smarthphones
+@include mediaSm {
+
+}

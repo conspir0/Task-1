@@ -1,0 +1,121 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $primary-font;
+}
+
+body {
+    h1 {
+        font-size: 2.7rem;
+    }
+    p {
+        font-size: 0.95rem;
+        margin: 1.5rem 0;
+    }
+    button {
+        font-size: 0.8rem;
+    }
+}
+
+// Header ---------------------------------------------
+header {
+    background: $background-header;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 10vw;
+    height: 100vh;
+    
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+        
+        .menu__logo {
+            margin-left: 0;
+            height: 1.8rem;
+        }
+        
+        .menu__nav {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            overflow: hidden;
+            
+            .menu__nav__item {
+                margin: 0 0.7rem;
+                
+                .menu__nav__item__link {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+                    color: $first-color;
+                    height: 100%;
+                    padding: 0.7rem 1.5rem;
+                    text-decoration: none;
+                }
+                
+            }
+            .menu__nav__item:last-child {
+                margin-right: 0;
+                border: 2px solid $fourth-color;
+                border-radius: 5rem;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 12vh; 
+        height: 85vh;
+        color: $first-color;
+        
+        .content__box__paragraph {
+            color: $fourth-color;
+        }
+        
+        .content__box {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-left: 0;
+            
+            .content__box__btn {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                margin-top: 4rem;
+                 
+                .btn {
+                    margin-right: 1rem;
+                    padding: 0.7rem 1.8rem;
+                    font-weight: 400;
+                    color: $first-color;
+                    border: none;
+                    cursor: pointer;
+                }
+                .btn:nth-child(1) {
+                    background-color: #6166ed;
+                    
+                }
+                
+                .btn:nth-child(2) {
+                    background-color: #312e64;
+                }
+            }
+        }
+        
+        .content__brand {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+        
+    }
+}
+
+@import 'rwd';
