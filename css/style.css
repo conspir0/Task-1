@@ -1,10 +1,11 @@
 .menu__burger__btn {
   position: absolute;
   z-index: 3;
-  right: 20px;
-  top: 20px;
+  right: 9vw;
+  top: 50px;
   cursor: pointer;
   transition: all 0.5s ease-out;
+  display: none;
 }
 
 .menu__burger__btn .btn__line {
@@ -63,10 +64,6 @@
 .menu__burger__item__logo {
   margin-top: 5vh;
   width: 40%;
-}
-
-.menu__burger__item:first-child {
-  border-bottom: 1px solid #fff;
 }
 
 .menu__burger__item__link {
@@ -219,6 +216,95 @@ header .content__brand {
 header .content__brand__img {
   height: 7vh;
   width: auto;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  body p {
+    margin: 0.8rem 0;
+  }
+  body header .content .content__box .content__box__btn {
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  body h1 {
+    font-size: 2.4rem;
+  }
+  body p {
+    margin: 0.3rem 0;
+  }
+  body header .menu__burger__btn {
+    display: block;
+  }
+  body header .menu__logo {
+    height: 5vw;
+  }
+  body header .menu__nav {
+    display: none;
+  }
+  body header .content__box {
+    text-align: center;
+  }
+  body header .content__box__paragraph {
+    font-size: .9rem;
+  }
+  body header .content__box__btn {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0 0;
+  }
+  body header .content__box__btn .btn {
+    margin: 1rem;
+  }
+  body header .content__box__btn a {
+    font-size: 0.8rem;
+    line-height: 40px;
+    width: 100%;
+  }
+  body header .content__brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body h1 {
+    font-size: 2.4rem;
+  }
+  body p {
+    margin: 0.3rem 0;
+  }
+  body header .menu__burger__btn {
+    display: block;
+  }
+  body header .menu__logo {
+    height: 5vw;
+  }
+  body header .menu__nav {
+    display: none;
+  }
+  body header .content__box {
+    text-align: center;
+  }
+  body header .content__box__paragraph {
+    font-size: .9rem;
+  }
+  body header .content__box__btn {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0 0;
+  }
+  body header .content__box__btn .btn {
+    margin: 1rem;
+  }
+  body header .content__box__btn a {
+    font-size: 0.6rem;
+    line-height: 40px;
+    width: 100%;
+  }
+  body header .content__brand {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

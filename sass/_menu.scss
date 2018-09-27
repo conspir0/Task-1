@@ -2,10 +2,11 @@
 .menu__burger__btn {
     position: absolute;
     z-index: 3;
-    right: 20px;
-    top: 20px;
+    right: 9vw;
+    top: 50px;
     cursor: pointer;
     @include easeOut;
+    display: none;
     
     .btn__line {
         width: 30px;
@@ -69,10 +70,6 @@
         &__logo {
             margin-top: 5vh;
             width: 40%;
-        }
-        
-        &:first-child {
-            border-bottom: 1px solid $first-color;
         }
         
         &__link {
