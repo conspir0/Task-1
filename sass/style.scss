@@ -13,13 +13,25 @@ body {
     h1 {
         font-size: 3.5vw;
     }
-    p {
-        margin: 1.5rem 0;
-        font-size: 1.25vw;
+    
+    h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $third-color;
     }
+
+    p {
+        margin-top: 3rem;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: $second-color;
+    }
+    
     button {
         font-size: 1.0vw;
     }
+    
     a {
         text-decoration: none;
     }
@@ -94,6 +106,7 @@ header {
                 
             &__paragraph {
                 justify-content: flex-start;
+                margin: 0;
                 color: $fourth-color;
             } 
             
@@ -143,9 +156,31 @@ header {
                 width: auto;
                 
             }
+        }  
+    }
+}
+
+// FIRST SECTION - What we do ---------------------------------------------
+section {
+    margin: 3rem 9vw;
+    
+    &#first__container {
+        display: grid;
+        grid-gap: 4.9rem;
+        grid-template-columns: repeat(2, 1fr);
+        
+        .first__container__image img{
+            margin-top: 4rem;
+            width: 100%;
         }
         
-    }
+        .first__container__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;            
+        }
+    }   
 }
 
 @import 'rwd';

@@ -91,9 +91,18 @@ body h1 {
   font-size: 3.5vw;
 }
 
+body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4b479e;
+}
+
 body p {
-  margin: 1.5rem 0;
-  font-size: 1.25vw;
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #333;
 }
 
 body button {
@@ -172,6 +181,7 @@ header .content__box {
 
 header .content__box__paragraph {
   justify-content: flex-start;
+  margin: 0;
   color: #6185d1;
 }
 
@@ -218,6 +228,28 @@ header .content__brand__img {
   width: auto;
 }
 
+section {
+  margin: 3rem 9vw;
+}
+
+section#first__container {
+  display: grid;
+  grid-gap: 4.9rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section#first__container .first__container__image img {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+section#first__container .first__container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1279px) {
   body p {
     margin: 0.8rem 0;
@@ -231,39 +263,43 @@ header .content__brand__img {
   body h1 {
     font-size: 2.4rem;
   }
-  body p {
-    margin: 0.3rem 0;
-  }
-  body header .menu__burger__btn {
+  header .menu__burger__btn {
     display: block;
   }
-  body header .menu__logo {
+  header .menu__logo {
     height: 5vw;
   }
-  body header .menu__nav {
+  header .menu__nav {
     display: none;
   }
-  body header .content__box {
+  header .content__box {
     text-align: center;
   }
-  body header .content__box__paragraph {
+  header .content__box__paragraph {
     font-size: .9rem;
   }
-  body header .content__box__btn {
+  header .content__box__btn {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 4vh 0 0;
   }
-  body header .content__box__btn .btn {
-    margin: 1rem;
+  header .content__box__btn .btn {
+    margin: .5rem;
+    max-width: 200px;
   }
-  body header .content__box__btn a {
-    font-size: 0.8rem;
-    line-height: 40px;
+  header .content__box__btn a {
+    padding: 0.6rem 1.2rem;
     width: 100%;
+    font-size: 0.8rem;
+    line-height: 20px;
   }
-  body header .content__brand {
+  header .content__brand {
     display: none;
+  }
+  section#first__container {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 2fr);
   }
 }
 
@@ -271,39 +307,42 @@ header .content__brand__img {
   body h1 {
     font-size: 2.4rem;
   }
-  body p {
-    margin: 0.3rem 0;
-  }
-  body header .menu__burger__btn {
+  header .menu__burger__btn {
     display: block;
   }
-  body header .menu__logo {
+  header .menu__logo {
     height: 5vw;
   }
-  body header .menu__nav {
+  header .menu__nav {
     display: none;
   }
-  body header .content__box {
+  header .content__box {
     text-align: center;
   }
-  body header .content__box__paragraph {
+  header .content__box__paragraph {
     font-size: .9rem;
   }
-  body header .content__box__btn {
+  header .content__box__btn {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 4vh 0 0;
   }
-  body header .content__box__btn .btn {
-    margin: 1rem;
+  header .content__box .btn {
+    margin: .5rem;
   }
-  body header .content__box__btn a {
-    font-size: 0.6rem;
-    line-height: 40px;
+  header .content__box a {
+    padding: 0.6rem 1.2rem;
     width: 100%;
+    font-size: 0.8rem;
+    line-height: 20px;
   }
-  body header .content__brand {
+  header .content__brand {
     display: none;
+  }
+  section#first__container {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 2fr);
   }
 }
 
