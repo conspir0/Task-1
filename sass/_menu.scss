@@ -1,0 +1,92 @@
+// Menu button ---------------------------------------------
+.menu__burger__btn {
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    @include easeOut;
+    
+    .btn__line {
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: $first-color;
+        @include easeOut;
+    }
+    
+    // Rotate Into X with menu lines ---------------------------------------------
+    &.close {
+        transform: rotate(180deg);
+        
+        .btn__line {
+            // Line 1 Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            // Line 2 Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            // Line 3 Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
+
+// Menu overlay ---------------------------------------------
+.menu__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(darken($third-color, 30), 0.9);
+    list-style-type: none;
+    text-align: center;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+    
+    &.show {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        
+        &__logo {
+            margin-top: 5vh;
+            width: 40%;
+        }
+        
+        &:first-child {
+            border-bottom: 1px solid $first-color;
+        }
+        
+        &__link {
+            display: block;
+            height: 100%;
+            width: 100vw;
+            font-size: 4vh;
+            line-height: 20vh;
+            text-decoration: none;
+            color: $first-color;
+            
+            &:hover {
+                background: rgba(lighten($first-color, 2), 0.3);
+            }
+        }
+    }
+}

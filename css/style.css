@@ -1,28 +1,118 @@
+.menu__burger__btn {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.menu__burger__btn .btn__line {
+  width: 30px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+}
+
+.menu__burger__btn.close {
+  transform: rotate(180deg);
+}
+
+.menu__burger__btn.close .btn__line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu__burger__btn.close .btn__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu__burger__btn.close .btn__line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.menu__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 24, 52, 0.9);
+  list-style-type: none;
+  text-align: center;
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.5s ease-out;
+}
+
+.menu__burger.show {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.menu__burger__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.menu__burger__item__logo {
+  margin-top: 5vh;
+  width: 40%;
+}
+
+.menu__burger__item:first-child {
+  border-bottom: 1px solid #fff;
+}
+
+.menu__burger__item__link {
+  display: block;
+  height: 100%;
+  width: 100vw;
+  font-size: 4vh;
+  line-height: 20vh;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu__burger__item__link:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif, "Arial";
 }
 
 body h1 {
-  font-size: 2.7rem;
+  font-size: 3.5vw;
 }
 
 body p {
-  font-size: 0.95rem;
   margin: 1.5rem 0;
+  font-size: 1.25vw;
 }
 
 body button {
-  font-size: 0.8rem;
+  font-size: 1.0vw;
+}
+
+body a {
+  text-decoration: none;
 }
 
 header {
   background: url(../images/background/bg-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 10vw;
+  background-position: center;
+  padding: 50px 9vw 0 9vw;
   height: 100vh;
 }
 
@@ -30,154 +120,105 @@ header .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
 }
 
-header .menu .menu__logo {
+header .menu__logo {
   margin-left: 0;
-  height: 1.8rem;
+  height: 2.2vw;
 }
 
-header .menu .menu__nav {
+header .menu__nav {
   display: flex;
-  flex-direction: row;
   list-style-type: none;
   overflow: hidden;
 }
 
-header .menu .menu__nav .menu__nav__item {
-  margin: 0 0.7rem;
+header .menu__nav__item {
+  margin: 0 1.05vw;
 }
 
-header .menu .menu__nav .menu__nav__item .menu__nav__item__link {
+header .menu__nav__item__link {
   display: flex;
   align-items: center;
-  font-weight: 600;
-  color: #fff;
   height: 100%;
-  padding: 0.7rem 1.5rem;
-  text-decoration: none;
+  padding: 1vw;
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.5s ease-out;
 }
 
-header .menu .menu__nav .menu__nav__item:last-child {
+header .menu__nav__item__link:hover {
+  color: #cccccc;
+}
+
+header .menu__nav__item:last-child {
   margin-right: 0;
   border: 2px solid #6185d1;
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 
 header .content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 12vh;
-  height: 85vh;
+  height: calc(100% - 50px);
+  padding-top: 5vh;
   color: #fff;
 }
 
-header .content .content__box__paragraph {
+header .content__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+header .content__box__paragraph {
+  justify-content: flex-start;
   color: #6185d1;
 }
 
-header .content .content__box {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-left: 0;
+header .content__box__btn {
+  margin-top: 8vh;
 }
 
-header .content .content__box .content__box__btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 4rem;
-}
-
-header .content .content__box .content__box__btn .btn {
+header .content__box__btn .btn {
   margin-right: 1rem;
-  padding: 0.7rem 1.8rem;
   font-weight: 400;
-  color: #fff;
   border: none;
-  cursor: pointer;
 }
 
-header .content .content__box .content__box__btn .btn:nth-child(1) {
+header .content__box__btn .btn:nth-child(1) a {
   background-color: #6166ed;
 }
 
-header .content .content__box .content__box__btn .btn:nth-child(2) {
+header .content__box__btn .btn:nth-child(2) a {
   background-color: #312e64;
+  margin-right: 0;
 }
 
-header .content .content__brand {
+header .content__box__btn .btn:hover a {
+  background: #3a377b;
+}
+
+header .content__box__btn a {
+  display: block;
+  padding: 1vw 2vw;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+header .content__brand {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 0;
+  align-items: flex-start;
+  height: 15vh;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1279px) {
-  body h1 {
-    font-size: 3rem;
-  }
-  body p, body button {
-    font-size: 1.1rem;
-  }
-  header .menu .menu__logo {
-    height: 1.5rem;
-  }
-  header .menu .menu__nav .menu__nav__item {
-    font-size: 0.8rem;
-    margin: 0 0.3rem;
-  }
-  header .menu .menu__nav .menu__nav__item .menu__nav__item__link {
-    padding: 0.7rem;
-  }
-  header .content .content__box .content__box__btn {
-    margin-top: 2.5rem;
-  }
-  header .content .content__box .content__box__btn .btn {
-    padding: 0.5rem 1rem;
-  }
-  header .content .content__brand .content__brand__img {
-    height: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 768px) {
-  body h1 {
-    font-size: 200%;
-  }
-  body p, body button {
-    font-size: 50%;
-  }
-  header .menu .menu__logo {
-    height: .6rem;
-  }
-  header .menu .menu__nav .menu__nav__item {
-    font-size: 0.4rem;
-    margin: 0 0.3rem;
-  }
-  header .menu .menu__nav .menu__nav__item .menu__nav__item__link {
-    padding: 0.2rem;
-  }
-  header .content .content__box {
-    margin: auto;
-    text-align: center;
-  }
-  header .content .content__box .content__box__btn {
-    margin: auto;
-    margin-top: 1.5rem;
-  }
-  header .content .content__box .content__box__btn .btn {
-    padding: 0.25rem .5rem;
-    margin: 0.5rem;
-  }
-  header .content .content__brand {
-    margin: 1.5rem 0;
-  }
-  header .content .content__brand .content__brand__img {
-    height: 5vh;
-  }
+header .content__brand__img {
+  height: 7vh;
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,6 @@
+// DEFAULT ---------------------------------------------
 @import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -9,110 +11,138 @@
 
 body {
     h1 {
-        font-size: 2.7rem;
+        font-size: 3.5vw;
     }
     p {
-        font-size: 0.95rem;
         margin: 1.5rem 0;
+        font-size: 1.25vw;
     }
     button {
-        font-size: 0.8rem;
+        font-size: 1.0vw;
+    }
+    a {
+        text-decoration: none;
     }
 }
 
-// Header ---------------------------------------------
+// HEADER ---------------------------------------------
 header {
     background: $background-header;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 10vw;
+    background-position: center;
+    padding: 50px 9vw 0 9vw;
     height: 100vh;
     
+    // Menu - classic ---------------------------------------------
     .menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 15vh;
         
-        .menu__logo {
+        &__logo {
             margin-left: 0;
-            height: 1.8rem;
+            height: 2.2vw;
         }
         
-        .menu__nav {
+        &__nav {
             display: flex;
-            flex-direction: row;
             list-style-type: none;
             overflow: hidden;
             
-            .menu__nav__item {
-                margin: 0 0.7rem;
+            &__item {
+                margin: 0 1.05vw;
                 
-                .menu__nav__item__link {
+                &__link {
                     display: flex;
                     align-items: center;
-                    font-weight: 600;
-                    color: $first-color;
                     height: 100%;
-                    padding: 0.7rem 1.5rem;
-                    text-decoration: none;
+                    padding: 1vw;
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    color: $first-color;
+                    @include easeOut;
+                    
+                    &:hover {
+                        color: darken($first-color, 20);
+                    }
                 }
                 
             }
-            .menu__nav__item:last-child {
+            &__item:last-child {
                 margin-right: 0;
                 border: 2px solid $fourth-color;
-                border-radius: 5rem;
+                border-radius: 3rem;
             }
         }
     }
+    
+    // Content ---------------------------------------------
     .content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        padding-top: 12vh; 
-        height: 85vh;
+        height: calc(100% - 50px);
+        padding-top: 5vh; 
         color: $first-color;
         
-        .content__box__paragraph {
-            color: $fourth-color;
-        }
-        
-        .content__box {
+        // Content - box(jumbotron + buttons) ---------------------------------------------
+        &__box {
             display: flex;
             flex-direction: column;
-            margin: auto;
-            margin-left: 0;
-            
-            .content__box__btn {
-                display: flex;
-                flex-direction: row;
+            justify-content: center;
+            height: 100%;
+                
+            &__paragraph {
                 justify-content: flex-start;
-                margin-top: 4rem;
+                color: $fourth-color;
+            } 
+            
+            &__btn {
+                margin-top: 8vh;
                  
                 .btn {
                     margin-right: 1rem;
-                    padding: 0.7rem 1.8rem;
                     font-weight: 400;
-                    color: $first-color;
                     border: none;
-                    cursor: pointer;
-                }
-                .btn:nth-child(1) {
-                    background-color: #6166ed;
                     
+                    &:nth-child(1) a {
+                        background-color: #6166ed;
+
+                    }
+
+                    &:nth-child(2) a {
+                        background-color: #312e64;
+                        margin-right: 0;
+                    }
+                    
+                    &:hover a {
+                        background: darken($third-color, 10);
+                    }
                 }
                 
-                .btn:nth-child(2) {
-                    background-color: #312e64;
+                a {    
+                    display: block;
+                    padding: 1vw 2vw;
+                    color: $first-color;
+                    cursor: pointer;
+                    @include easeOut;
+                    
                 }
             }
         }
         
-        .content__brand {
+        // Content - brands ---------------------------------------------
+        &__brand {
             display: flex;
             justify-content: space-between;
-            margin: 3rem 0;
+            align-items: flex-start;
+            height: 15vh;
+            
+            &__img {
+                height: 7vh;
+                width: auto;
+                
+            }
         }
         
     }

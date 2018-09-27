@@ -4,8 +4,8 @@ $third-color: #4b479e;
 $fourth-color: #6185d1;
 $background-header: url(../images/background/bg-header.jpg);
 $background-header-logo: url(../images/menu-logo/menu-logo.jpg);
-$background-opacity: 0.2;
-$primary-font: 'Montserrat', sans-serif;
+//$background-opacity: 0.2;
+$primary-font: 'Montserrat', sans-serif, 'Arial';
 
 // Transition
 @mixin easeOut {
