@@ -17,6 +17,7 @@ body {
     h2{
         font-size: 1.5rem;
         font-weight: 700;
+        text-align: center;
         color: $third-color;
     }
 
@@ -25,6 +26,7 @@ body {
         font-size: 1rem;
         font-weight: 500;
         line-height: 2rem;
+        text-align: center;
         color: $second-color;
     }
     
@@ -35,6 +37,10 @@ body {
     
     a {
         text-decoration: none;
+    }
+    
+    section {
+        padding: 6rem 9vw;
     }
 }
 
@@ -108,6 +114,7 @@ header {
             &__paragraph {
                 justify-content: flex-start;
                 margin: 0;
+                text-align: left;
                 color: $fourth-color;
             } 
             
@@ -161,33 +168,21 @@ header {
 }
 
 // FIRST SECTION - What we do ---------------------------------------------
-section {
-    margin: 3rem 9vw;
+.first__container {        
+    @include grid2Columns;
+    padding: 2rem 9vw;
     
-    &#first__container {
-        display: grid;
-        grid-gap: 4.9rem;
-        grid-template-columns: repeat(2, 1fr);
-        
-        .first__container__image img{
-            margin-top: 4rem;
-            width: 100%;
-        }
-        
-        .first__container__text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;            
-        }
-    }   
+    img {
+        margin-top: 4rem;
+    }
 }
 
 // SECOND SECTION - Offer ---------------------------------------------
-#second__container{
+.second__container{
     display: grid;
     grid-gap: 4.9rem;
     grid-template-columns: repeat(4, 1fr);
+    padding: 5rem 9vw;
     
     .second__container__box {
         min-height: 250px;
@@ -218,6 +213,7 @@ section {
                 line-height: 1.5rem;
                 font-weight: 600;
                 color: $third-color;
+                text-align: left;
             }
         }
         
@@ -240,6 +236,12 @@ section {
             }
         }
     }
+}
+
+// THIRD SECTION - Technology 1 ---------------------------------------------
+.third__container {
+    @include grid2Columns;
+    background-color: #f0f0f0;
 }
 
 @import 'rwd';

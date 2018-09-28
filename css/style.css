@@ -94,6 +94,7 @@ body h1 {
 body h2 {
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: center;
   color: #4b479e;
 }
 
@@ -102,6 +103,7 @@ body p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 2rem;
+  text-align: center;
   color: #333;
 }
 
@@ -112,6 +114,10 @@ body button {
 
 body a {
   text-decoration: none;
+}
+
+body section {
+  padding: 6rem 9vw;
 }
 
 header {
@@ -183,6 +189,7 @@ header .content__box {
 header .content__box__paragraph {
   justify-content: flex-start;
   margin: 0;
+  text-align: left;
   color: #6185d1;
 }
 
@@ -229,35 +236,41 @@ header .content__brand__img {
   width: auto;
 }
 
-section {
-  margin: 3rem 9vw;
-}
-
-section#first__container {
+.first__container {
   display: grid;
   grid-gap: 4.9rem;
   grid-template-columns: repeat(2, 1fr);
+  padding: 8rem 9vw;
+  padding: 2rem 9vw;
 }
 
-section#first__container .first__container__image img {
-  margin-top: 4rem;
+.first__container.x__container .x__container__image {
+  display: flex;
+  align-items: center;
+}
+
+.first__container.x__container .x__container__image img {
   width: 100%;
 }
 
-section#first__container .first__container__text {
+.first__container.x__container .x__container__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 
-#second__container {
+.first__container img {
+  margin-top: 4rem;
+}
+
+.second__container {
   display: grid;
   grid-gap: 4.9rem;
   grid-template-columns: repeat(4, 1fr);
+  padding: 5rem 9vw;
 }
 
-#second__container .second__container__box {
+.second__container .second__container__box {
   min-height: 250px;
   max-width: 400px;
   margin: 0 auto;
@@ -267,34 +280,35 @@ section#first__container .first__container__text {
   color: #4b479e;
 }
 
-#second__container .second__container__box__content {
+.second__container .second__container__box__content {
   padding: 2rem;
 }
 
-#second__container .second__container__box__content__image {
+.second__container .second__container__box__content__image {
   height: 130px;
 }
 
-#second__container .second__container__box__content__image img {
+.second__container .second__container__box__content__image img {
   height: 100%;
 }
 
-#second__container .second__container__box__content h3 {
+.second__container .second__container__box__content h3 {
   margin: 2rem 0;
 }
 
-#second__container .second__container__box__content p {
+.second__container .second__container__box__content p {
   margin: 0;
   line-height: 1.5rem;
   font-weight: 600;
   color: #4b479e;
+  text-align: left;
 }
 
-#second__container .second__container__box button {
+.second__container .second__container__box button {
   width: 100%;
 }
 
-#second__container .second__container__box button a {
+.second__container .second__container__box button a {
   display: block;
   width: 100%;
   line-height: 3rem;
@@ -305,8 +319,31 @@ section#first__container .first__container__text {
   transition: all 0.5s ease-out;
 }
 
-#second__container .second__container__box button a img {
+.second__container .second__container__box button a img {
   margin-left: .3rem;
+}
+
+.third__container {
+  display: grid;
+  grid-gap: 4.9rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem 9vw;
+  background-color: #f0f0f0;
+}
+
+.third__container.x__container .x__container__image {
+  display: flex;
+  align-items: center;
+}
+
+.third__container.x__container .x__container__image img {
+  width: 100%;
+}
+
+.third__container.x__container .x__container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1279px) {
@@ -316,8 +353,7 @@ section#first__container .first__container__text {
   header .content .content__box .content__box__btn {
     margin-top: 4vh;
   }
-  section#second__container {
-    grid-template-rows: auto;
+  section.second__container {
     grid-template-columns: repeat(2, 2fr);
   }
 }
@@ -340,12 +376,12 @@ section#first__container .first__container__text {
   }
   header .content__box__paragraph {
     font-size: .9rem;
+    text-align: center;
   }
   header .content__box__btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4vh 0 0;
   }
   header .content__box__btn .btn {
     margin: .5rem;
@@ -360,59 +396,10 @@ section#first__container .first__container__text {
   header .content__brand {
     display: none;
   }
-  section#first__container {
-    grid-template-rows: auto;
+  section.x__container {
     grid-template-columns: repeat(1, 2fr);
   }
-  section#second__container {
-    grid-template-rows: auto;
-    grid-template-columns: repeat(1, 2fr);
-  }
-}
-
-@media screen and (max-width: 320px) {
-  body h1 {
-    font-size: 2.4rem;
-  }
-  header .menu__burger__btn {
-    display: block;
-  }
-  header .menu__logo {
-    height: 5vw;
-  }
-  header .menu__nav {
-    display: none;
-  }
-  header .content__box {
-    text-align: center;
-  }
-  header .content__box__paragraph {
-    font-size: .9rem;
-  }
-  header .content__box__btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4vh 0 0;
-  }
-  header .content__box .btn {
-    margin: .5rem;
-  }
-  header .content__box a {
-    padding: 0.6rem 1.2rem;
-    width: 100%;
-    font-size: 0.8rem;
-    line-height: 20px;
-  }
-  header .content__brand {
-    display: none;
-  }
-  section#first__container {
-    grid-template-rows: auto;
-    grid-template-columns: repeat(1, 2fr);
-  }
-  section#second__container {
-    grid-template-rows: auto;
+  section.second__container {
     grid-template-columns: repeat(1, 2fr);
   }
 }

@@ -14,15 +14,17 @@
         margin-top: 4vh;
     }
     
-    section#second__container {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(2, 2fr);
+    section {    
+        &.second__container {
+            grid-template-columns: repeat(2, 2fr);
+        }
     }
 }
 
 // Tablets & small laptops
 @include mediaMd {
     body {
+        
         h1 {
             font-size: 2.4rem;
         }
@@ -49,13 +51,13 @@
 
                 &__paragraph {
                     font-size: .9rem;
+                    text-align: center;
                 }
 
                 &__btn {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 4vh 0 0;
 
                     .btn {
                         margin: .5rem;
@@ -70,88 +72,25 @@
                     }
                 }
             }
-
+            
             &__brand {
                 display: none;
             }
         }
     }
     
-    section#first__container {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(1, 2fr);
-    }
+    section {
+        &.x__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
     
-    section#second__container {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(1, 2fr);
+        &.second__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
     }
 }
 
 // Smarthphones
 @include mediaSm {
-    body {
-        h1 {
-            font-size: 2.4rem;
-        }
-    }
-    
-    header {
-        .menu__burger__btn {
-            display: block;
-        }
-        
-        .menu {
 
-            &__logo {
-                height: 5vw;
-            }
-
-            &__nav {
-                display: none;
-            }
-        }
-
-        .content {
-            &__box {
-                text-align: center;
-
-                &__paragraph {
-                    font-size: .9rem;
-                }
-
-                &__btn {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin: 4vh 0 0;
-                }
-
-                .btn {
-                    margin: .5rem;
-                }
-
-                & a {
-                    padding: 0.6rem 1.2rem;
-                    width: 100%;
-                    font-size: 0.8rem;
-                    line-height: 20px;
-                }
-            }
-
-            &__brand {
-                display: none;
-            }
-        }
-    }
-    
-    section#first__container {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(1, 2fr);
-    }
-    
-    section#second__container {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(1, 2fr);
-    }
 }

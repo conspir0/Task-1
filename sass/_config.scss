@@ -12,15 +12,33 @@ $primary-font: 'Montserrat', sans-serif, 'Arial';
     transition: all 0.5s ease-out;
 }
 
-// Media Query Mixins
-@mixin mediaSm {
-    @media screen and (max-width: 320px) {
-        @content;
+// Grid - 2 boxes
+@mixin grid2Columns {
+    display: grid;
+    grid-gap: 4.9rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem 9vw;
+    
+    &.x__container {        
+        .x__container__image {
+            display: flex;
+            align-items: center;
+            img{
+                width: 100%;
+            }
+        }
+        
+        .x__container__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;          
+        }
     }
 }
 
-@mixin mediaMd {
-    @media screen and (min-width: 321px) and (max-width: 768px) {
+// Media Query Mixins
+@mixin mediaXl {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }
@@ -31,8 +49,14 @@ $primary-font: 'Montserrat', sans-serif, 'Arial';
     }
 }
 
-@mixin mediaXl {
-    @media screen and (min-width: 1280px) {
+@mixin mediaMd {
+    @media screen and (min-width: 321px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaSm {
+    @media screen and (max-width: 320px) {
         @content;
     }
 }
