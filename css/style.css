@@ -346,6 +346,30 @@ header .content__brand__img {
   justify-content: center;
 }
 
+.fourth__container {
+  display: grid;
+  grid-gap: 4.9rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem 9vw;
+  direction: rtl;
+  background-color: inherit;
+}
+
+.fourth__container.x__container .x__container__image {
+  display: flex;
+  align-items: center;
+}
+
+.fourth__container.x__container .x__container__image img {
+  width: 100%;
+}
+
+.fourth__container.x__container .x__container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1279px) {
   body p {
     margin: 0.8rem 0;
@@ -359,6 +383,52 @@ header .content__brand__img {
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
+  body h1 {
+    font-size: 2.4rem;
+  }
+  header .menu__burger__btn {
+    display: block;
+  }
+  header .menu__logo {
+    height: 5vw;
+  }
+  header .menu__nav {
+    display: none;
+  }
+  header .content__box {
+    text-align: center;
+  }
+  header .content__box__paragraph {
+    font-size: .9rem;
+    text-align: center;
+  }
+  header .content__box__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .content__box__btn .btn {
+    margin: .5rem;
+    max-width: 200px;
+  }
+  header .content__box__btn a {
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+  header .content__brand {
+    display: none;
+  }
+  section.x__container {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  section.second__container {
+    grid-template-columns: repeat(1, 2fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
   body h1 {
     font-size: 2.4rem;
   }

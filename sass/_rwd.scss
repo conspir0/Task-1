@@ -10,6 +10,7 @@
             margin: 0.8rem 0;
         }
     }
+    
     header .content .content__box .content__box__btn {
         margin-top: 4vh;
     }
@@ -29,6 +30,7 @@
             font-size: 2.4rem;
         }
     }
+    
     header {
         .menu__burger__btn {
             display: block;
@@ -92,5 +94,70 @@
 
 // Smarthphones
 @include mediaSm {
+body {
+        
+        h1 {
+            font-size: 2.4rem;
+        }
+    }
+    
+    header {
+        .menu__burger__btn {
+            display: block;
+        }
+        
+        .menu {
 
+            &__logo {
+                height: 5vw;
+            }
+
+            &__nav {
+                display: none;
+            }
+        }
+
+        .content {
+            &__box {
+                text-align: center;
+
+                &__paragraph {
+                    font-size: .9rem;
+                    text-align: center;
+                }
+
+                &__btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .btn {
+                        margin: .5rem;
+                        max-width: 200px;
+                    }
+
+                    & a {
+                        padding: 0.6rem 1.2rem;
+                        width: 100%;
+                        font-size: 0.8rem;
+                        line-height: 20px;
+                    }
+                }
+            }
+            
+            &__brand {
+                display: none;
+            }
+        }
+    }
+    
+    section {
+        &.x__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
+    
+        &.second__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
+    }
 }

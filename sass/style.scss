@@ -244,4 +244,11 @@ header {
     background-color: #f0f0f0;
 }
 
+// FOURTH SECTION - Technology 2 ---------------------------------------------
+.fourth__container {
+    @include grid2Columns;
+    direction: rtl;
+    background-color: inherit;
+}
+
 @import 'rwd';
