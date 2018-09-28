@@ -489,6 +489,7 @@ footer .info__content .info__box-2 .form__field input, footer .info__content .in
   padding: .5rem 0;
   background-color: inherit;
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid #fff;
   color: #fff;
   cursor: text;
@@ -548,6 +549,9 @@ footer .copyright {
   footer .info__content .info__box-1 {
     align-items: center;
   }
+  footer .info__content .info__box-1__socials {
+    margin-right: 0;
+  }
   footer .info__content .info__box-1__contact p, footer .info__content .info__box-1__socials {
     text-align: center;
   }
@@ -601,8 +605,17 @@ footer .copyright {
     grid-template-areas: 'box-1' 'info__name' 'box-2';
     grid-template-columns: 1fr;
   }
+  footer .info__content .info__name h2 {
+    text-align: center;
+  }
   footer .info__content .info__box-1 {
     align-items: center;
+  }
+  footer .info__content .info__box-1__socials a {
+    margin: 1rem;
+  }
+  footer .info__content .info__box-1__socials a i {
+    transform: scale(1.5);
   }
   footer .info__content .info__box-1__contact p, footer .info__content .info__box-1__socials {
     text-align: center;

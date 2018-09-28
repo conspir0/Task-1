@@ -31,6 +31,10 @@
         .info__box-1 {
             align-items: center;
             
+            &__socials {
+                margin-right: 0;
+            }
+            
             &__contact p, &__socials {
                 text-align: center;
             }
@@ -114,9 +118,21 @@
             'info__name'
             'box-2';
             grid-template-columns: 1fr;
+            
+            .info__name h2 {
+                text-align: center;
+            }
 
             .info__box-1 {
                 align-items: center;
+                
+                &__socials a{
+                    margin: 1rem;
+                    
+                    i {
+                        transform: scale(1.5);
+                    }
+                }
 
                 &__contact p, &__socials {
                     text-align: center;
