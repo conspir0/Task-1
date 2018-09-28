@@ -370,6 +370,167 @@ header .content__brand__img {
   justify-content: center;
 }
 
+footer {
+  padding: 4rem 9vw;
+  background: url(../images/background/bg-footer.jpg) center/cover no-repeat;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+footer .info__content {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas: '. info__name' 'box-1 box-2';
+  grid-template-columns: 1fr 2fr;
+}
+
+footer .info__content .info__name {
+  grid-area: info__name;
+}
+
+footer .info__content .info__name h2 {
+  text-align: left;
+  text-transform: none;
+  font-weight: 400;
+  color: #fff;
+}
+
+footer .info__content .info__box-1 {
+  grid-area: box-1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+footer .info__content .info__box-1__contact p {
+  margin: 0 0 2rem;
+  line-height: 1.5rem;
+  text-align: left;
+  font-weight: 400;
+  color: #fff;
+}
+
+footer .info__content .info__box-1__contact p span {
+  color: #7dbd6e;
+}
+
+footer .info__content .info__box-1__socials {
+  margin: 1rem 0 3rem;
+}
+
+footer .info__content .info__box-1__socials a {
+  margin-right: 1.9rem;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all 0.5s ease-out;
+}
+
+footer .info__content .info__box-1__socials a:hover {
+  color: #7dbd6e;
+}
+
+footer .info__content .info__box-2 form {
+  grid-area: box-2;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas: 'fullname email' 'tel topic' 'message message' '. btn';
+  grid-template-columns: repeat(2, 1fr);
+}
+
+footer .info__content .info__box-2 .field__fullname {
+  grid-area: fullname;
+}
+
+footer .info__content .info__box-2 .field__email {
+  grid-area: email;
+}
+
+footer .info__content .info__box-2 .field__tel {
+  grid-area: tel;
+}
+
+footer .info__content .info__box-2 .field__topic {
+  grid-area: topic;
+}
+
+footer .info__content .info__box-2 .field__message {
+  grid-area: message;
+}
+
+footer .info__content .info__box-2 .field__btn {
+  grid-area: btn;
+  width: 12rem;
+  height: 4rem;
+  margin-left: auto;
+  background-color: inherit;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50rem;
+  transition: all 0.5s ease-out;
+}
+
+footer .info__content .info__box-2 .field__btn:hover {
+  border-color: #7dbd6e;
+  color: #7dbd6e;
+}
+
+footer .info__content .info__box-2 .form__field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1rem;
+}
+
+footer .info__content .info__box-2 .form__field label, footer .info__content .info__box-2 .form__field input, footer .info__content .info__box-2 .form__field textarea {
+  transition: all 0.5s ease-out;
+  touch-action: manipulation;
+}
+
+footer .info__content .info__box-2 .form__field input, footer .info__content .info__box-2 .form__field textarea {
+  padding: .5rem 0;
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  cursor: text;
+}
+
+footer .info__content .info__box-2 .form__field input:focus, footer .info__content .info__box-2 .form__field textarea:focus {
+  outline: 0;
+}
+
+footer .info__content .info__box-2 .form__field input:placeholder-shown + label, footer .info__content .info__box-2 .form__field textarea:placeholder-shown + label {
+  white-space: nowrap;
+  overflow: hidden;
+  transform-origin: left bottom;
+  transform: translate(0, 1.5rem);
+}
+
+footer .info__content .info__box-2 .form__field input:not(:placeholder-shown) + label,
+footer .info__content .info__box-2 .form__field input:focus + label, footer .info__content .info__box-2 .form__field textarea:not(:placeholder-shown) + label,
+footer .info__content .info__box-2 .form__field textarea:focus + label {
+  transform: translate(0, 0);
+  cursor: pointer;
+}
+
+footer .info__content .info__box-2 .form__field textarea {
+  height: 5rem;
+}
+
+footer .info__content .info__box-2 .form__field textarea:placeholder-shown + label {
+  transform: translate(0, 4.5rem);
+}
+
+footer .info__content .info__box-2 .form__field textarea:not(:placeholder-shown) + label,
+footer .info__content .info__box-2 .form__field textarea:focus + label {
+  transform: translate(0, 0);
+}
+
+footer .copyright {
+  margin-top: 10rem;
+  text-align: left;
+  color: #fff;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1279px) {
   body p {
     margin: 0.8rem 0;
@@ -379,6 +540,16 @@ header .content__brand__img {
   }
   section.second__container {
     grid-template-columns: repeat(2, 2fr);
+  }
+  footer .info__content {
+    grid-template-areas: 'box-1' 'info__name' 'box-2';
+    grid-template-columns: 1fr;
+  }
+  footer .info__content .info__box-1 {
+    align-items: center;
+  }
+  footer .info__content .info__box-1__contact p, footer .info__content .info__box-1__socials {
+    text-align: center;
   }
 }
 
@@ -426,51 +597,42 @@ header .content__brand__img {
   section.second__container {
     grid-template-columns: repeat(1, 2fr);
   }
+  footer .info__content {
+    grid-template-areas: 'box-1' 'info__name' 'box-2';
+    grid-template-columns: 1fr;
+  }
+  footer .info__content .info__box-1 {
+    align-items: center;
+  }
+  footer .info__content .info__box-1__contact p, footer .info__content .info__box-1__socials {
+    text-align: center;
+  }
+  footer .info__content .info__box-2 form {
+    grid-area: box-2;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'fullname' 'email' 'tel' 'topic' 'message' 'btn';
+    grid-template-columns: 1fr;
+  }
+  footer .info__content .info__box-2 form .field__btn {
+    margin: 0 auto;
+  }
+  footer .copyright {
+    margin-top: 4rem;
+    text-align: justify;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  body h1 {
-    font-size: 2.4rem;
+  footer .info__content {
+    grid-template-areas: 'box-1' 'info__name' 'box-2';
+    grid-template-columns: 1fr;
   }
-  header .menu__burger__btn {
-    display: block;
-  }
-  header .menu__logo {
-    height: 5vw;
-  }
-  header .menu__nav {
-    display: none;
-  }
-  header .content__box {
-    text-align: center;
-  }
-  header .content__box__paragraph {
-    font-size: .9rem;
-    text-align: center;
-  }
-  header .content__box__btn {
-    display: flex;
-    flex-direction: column;
+  footer .info__content .info__box-1 {
     align-items: center;
   }
-  header .content__box__btn .btn {
-    margin: .5rem;
-    max-width: 200px;
-  }
-  header .content__box__btn a {
-    padding: 0.6rem 1.2rem;
-    width: 100%;
-    font-size: 0.8rem;
-    line-height: 20px;
-  }
-  header .content__brand {
-    display: none;
-  }
-  section.x__container {
-    grid-template-columns: repeat(1, 2fr);
-  }
-  section.second__container {
-    grid-template-columns: repeat(1, 2fr);
+  footer .info__content .info__box-1__contact p, footer .info__content .info__box-1__socials {
+    text-align: center;
   }
 }
 

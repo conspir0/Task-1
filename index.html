@@ -8,6 +8,7 @@
     <meta name="keywords" content="AWWW, layout, HTML, CSS, JS, RWD">
     <title>Task AWWW</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -91,6 +92,7 @@
         </container>
     </header>
     
+    <!--  MAIN CONTENT  -->
     <main>
        
         <!--  FIRST CONTAINER - What we do  -->
@@ -181,13 +183,69 @@
         </section>
         
     </main>
-    
-
-    
-    
-    
-    <footer>
         
+    <!--  FOOTER  -->
+    <footer>
+        <div class="info__content">
+    
+            <!--  FOOTER - name  -->
+            <div></div>
+            <div class="info__name">
+                <h2>Formularz kontaktowy</h2>
+            </div>
+
+            <!--  FOOTER - contact & socials  -->
+            <div class="info__box-1">
+               
+                <!--  FOOTER - contact  -->
+                <div class="info__box-1__contact">
+                    <p>al. pokoju 1 (xi piętro)<br>31-548 Kraków</p>
+                    <p>
+                        tel <span>+48 504 020 682</span><br>
+                        e-mail <span>join@awww.software</span>
+                    </p>
+                </div>
+                
+                <!--  FOOTER - socials  -->
+                <div class="info__box-1__socials">
+                    <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#!"><i class="fab fa-youtube"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#!"><i class="fab fa-twitter"></i></a>
+                    <a href="#!"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!--  FOOTER - form  -->
+            <div class="info__box-2">
+               <form> 
+                   <div class="form__field field__fullname">
+                        <input type="text" name="fullname" id="fullname" placeholder=" ">
+                        <label for="fullname">imię i nazwisko</label>
+                    </div>
+                    <div class="form__field field__email">
+                        <input type="email" name="email" id="email" placeholder=" ">
+                        <label for="email">adress e-mail</label>
+                    </div>
+                    <div class="form__field field__tel">
+                        <input type="tel" name="tel" id="tel" placeholder=" ">
+                        <label for="tel">numer telefonu</label>
+                    </div>
+                    <div class="form__field field__topic">
+                        <input type="text" name="topic" id="topic" placeholder=" ">
+                        <label for="topic">temat wiadomości</label>
+                    </div>
+                    <div class="form__field field__message">
+                        <textarea name="message" id="message" placeholder=" "></textarea>
+                        <label for="message">treść wiadomości</label>
+                    </div>
+                    <button class="field__btn" type="submit">wyślij wiadomość</button>
+                </form>
+                    </div>
+        </div>
+        
+         <!--  FOOTER - copyright  -->
+        <p class="copyright">&copy; copyright 2018 inifinity power international. wszelkie prawa zastrzeżone.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>

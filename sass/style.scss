@@ -251,4 +251,176 @@ header {
     background-color: inherit;
 }
 
+// FOOTER ---------------------------------------------
+footer {
+    
+    padding: 4rem 9vw;
+    background: url(../images/background/bg-footer.jpg) center/cover no-repeat;
+    text-transform: uppercase;
+    color: $first-color;
+    
+    .info__content {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-areas:
+        '. info__name'
+        'box-1 box-2';
+        grid-template-columns: 1fr 2fr;
+        
+        .info__name {
+            grid-area: info__name;
+            
+            h2 {
+                text-align: left;
+                text-transform: none;
+                font-weight: 400;
+                color: $first-color;
+            }
+        }
+        
+        // FOOTER - contact & socials ---------------------------------------------
+        .info__box-1 {
+            grid-area: box-1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5rem;
+            
+            &__contact p {
+                margin: 0 0 2rem;
+                line-height: 1.5rem;
+                text-align: left;
+                font-weight: 400;
+                color: $first-color;
+                
+                span {
+                    color: $fifth-color;
+                }
+            }
+            
+            &__socials {
+                margin: 1rem 0 3rem;
+                
+                a {
+                    margin-right: 1.9rem;
+                    font-size: 1.2rem;
+                    color: $first-color;
+                    @include easeOut;
+                    
+                    &:hover {
+                        color: $fifth-color;
+                    }
+                }
+            }
+        }
+        
+        // FOOTER - form ---------------------------------------------
+        .info__box-2 {
+            form {
+                grid-area: box-2;
+                display: grid;
+                grid-gap: 1.5rem;
+                grid-template-areas:
+                'fullname email'
+                'tel topic'
+                'message message'
+                '. btn';
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .field__fullname {
+                grid-area: fullname;
+            }
+            
+            .field__email {
+                grid-area: email;
+            }
+            
+            .field__tel {
+                grid-area: tel;
+            }
+            
+            .field__topic {
+                grid-area: topic;
+            }
+            
+            .field__message {
+                grid-area: message;
+            }
+            
+            .field__btn {
+                grid-area: btn;
+                width: 12rem;
+                height: 4rem;
+                margin-left: auto;
+                background-color: inherit;
+                color: $first-color;
+                border: 2px solid $first-color;
+                border-radius: 50rem;
+                @include easeOut;
+                
+                &:hover {
+                    border-color: $fifth-color;
+                    color: $fifth-color;
+                }
+            }
+            
+            .form__field {
+                display: flex;
+                flex-flow: column-reverse;
+                margin-bottom: 1rem;
+                
+                label, input, textarea {
+                    @include easeOut;
+                    touch-action: manipulation;
+                }
+                
+                input, textarea {
+                    padding: .5rem 0;
+                    background-color: inherit;
+                    border: none;
+                    border-bottom: 2px solid $first-color;
+                    color: $first-color;
+                    cursor: text;
+                    
+                    &:focus {
+                        outline: 0;
+                    }
+                    
+                    &:placeholder-shown + label {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        transform-origin: left bottom;
+                        transform: translate(0, 1.5rem);
+                    }
+                    
+                    &:not(:placeholder-shown) + label,
+                    &:focus + label {
+                        transform: translate(0, 0);
+                        cursor: pointer;
+                    }
+                }
+                
+                textarea {
+                    height: 5rem;
+                    
+                    &:placeholder-shown + label {
+                        transform: translate(0, 4.5rem);
+                    }
+
+                    &:not(:placeholder-shown) + label,
+                    &:focus + label {
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+        }
+    }
+    
+    .copyright {
+        margin-top: 10rem;
+        text-align: left;
+        color: $first-color;
+    }
+}
+
 @import 'rwd';
