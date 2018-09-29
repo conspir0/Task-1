@@ -323,6 +323,10 @@ header .content__brand__img {
   margin-left: .3rem;
 }
 
+.second__container .second__container__box button a:hover {
+  background-color: #6b67bb;
+}
+
 .third__container {
   display: grid;
   grid-gap: 4.9rem;
@@ -511,6 +515,35 @@ footer .info__content .info__box-2 .form__field input:focus + label, footer .inf
 footer .info__content .info__box-2 .form__field textarea:focus + label {
   transform: translate(0, 0);
   cursor: pointer;
+}
+
+footer .info__content .info__box-2 .form__field input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+footer .info__content .info__box-2 .form__field input::-webkit-outer-spin-button,
+footer .info__content .info__box-2 .form__field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+footer .info__content .info__box-2 .form__field input[type="text"].error,
+footer .info__content .info__box-2 .form__field input[type="number"].error,
+footer .info__content .info__box-2 .form__field input[type="email"].error {
+  border-bottom: 2px solid #db083e;
+}
+
+footer .info__content .info__box-2 .form__field input[type="text"].ok,
+footer .info__content .info__box-2 .form__field input[type="number"].ok,
+footer .info__content .info__box-2 .form__field input[type="email"].ok {
+  border-bottom: 2px solid #7dbd6e;
+}
+
+footer .info__content .info__box-2 .form__field textarea.error {
+  border-color: #db083e;
+}
+
+footer .info__content .info__box-2 .form__field textarea.ok {
+  border-color: #7dbd6e;
 }
 
 footer .info__content .info__box-2 .form__field textarea {

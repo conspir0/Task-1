@@ -218,25 +218,25 @@
             
             <!--  FOOTER - form  -->
             <div class="info__box-2">
-               <form> 
+               <form class="form"> 
                    <div class="form__field field__fullname">
-                        <input type="text" name="fullname" id="fullname" placeholder=" ">
+                        <input type="text" name="fullname" id="fullname" required placeholder=" ">
                         <label for="fullname">imię i nazwisko</label>
                     </div>
                     <div class="form__field field__email">
-                        <input type="email" name="email" id="email" placeholder=" ">
+                        <input type="email" name="email" id="email" class="" required placeholder=" ">
                         <label for="email">adress e-mail</label>
                     </div>
                     <div class="form__field field__tel">
-                        <input type="tel" name="tel" id="tel" placeholder=" ">
+                        <input type="number" name="tel" id="tel" required placeholder=" ">
                         <label for="tel">numer telefonu</label>
                     </div>
                     <div class="form__field field__topic">
-                        <input type="text" name="topic" id="topic" placeholder=" ">
+                        <input type="text" name="topic" id="topic" required placeholder=" ">
                         <label for="topic">temat wiadomości</label>
                     </div>
                     <div class="form__field field__message">
-                        <textarea name="message" id="message" placeholder=" "></textarea>
+                        <textarea type="text" name="message" id="message" required placeholder=" "></textarea>
                         <label for="message">treść wiadomości</label>
                     </div>
                     <button class="field__btn" type="submit">wyślij wiadomość</button>
@@ -247,6 +247,8 @@
          <!--  FOOTER - copyright  -->
         <p class="copyright">&copy; copyright 2018 inifinity power international. wszelkie prawa zastrzeżone.</p>
     </footer>
+    
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

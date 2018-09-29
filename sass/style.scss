@@ -193,6 +193,7 @@ header {
         box-shadow: 0px 0px 51px 0px rgba(51,51,51,0.1);
         color: $third-color;
         
+        // SECOND SECTION - box bocntent ---------------------------------------------
         &__content {
             padding: 2rem;
             
@@ -217,6 +218,7 @@ header {
             }
         }
         
+        // SECOND SECTION - box button ---------------------------------------------
         button {
             width: 100%;
             
@@ -232,6 +234,10 @@ header {
                 
                 img {
                     margin-left: .3rem;
+                }
+                
+                &:hover {
+                    background-color: lighten($third-color, 12);
                 }
             }
         }
@@ -267,6 +273,7 @@ footer {
         'box-1 box-2';
         grid-template-columns: 1fr 2fr;
         
+        // FOOTER - form title ---------------------------------------------
         .info__name {
             grid-area: info__name;
             
@@ -401,6 +408,37 @@ footer {
                     }
                 }
                 
+                // FOOTER - form - validation  ---> ---------------------------------------------
+                input[type='number'] {
+                    -moz-appearance:textfield;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                
+                input[type="text"].error,
+                input[type="number"].error,
+                input[type="email"].error {
+                    border-bottom: 2px solid $sixth-color;
+                }
+                
+                input[type="text"].ok,
+                input[type="number"].ok,
+                input[type="email"].ok {
+                    border-bottom: 2px solid $fifth-color;
+                }
+                
+                textarea.error {
+                    border-color: $sixth-color;
+                }
+
+                textarea.ok {
+                    border-color: $fifth-color;
+                }
+                // FOOTER - form - validation <--- ---------------------------------------------
+                
                 textarea {
                     height: 5rem;
                     
@@ -417,6 +455,7 @@ footer {
         }
     }
     
+    // FOOTER - copyright ---------------------------------------------
     .copyright {
         margin-top: 10rem;
         text-align: left;
@@ -424,4 +463,5 @@ footer {
     }
 }
 
+// DEFAULT - RWD ---------------------------------------------
 @import 'rwd';
