@@ -168,19 +168,124 @@
 
 // Smarthphones
 @include mediaSm {
-    footer .info__content {
-        grid-template-areas:
-        'box-1'
-        'info__name'
-        'box-2';
-        grid-template-columns: 1fr;
+        body {
         
-        .info__box-1 {
-            align-items: center;
+        h1 {
+            font-size: 2.4rem;
+        }
+    }
+    
+    header {
+        .menu__burger__btn {
+            display: block;
+        }
+        
+        .menu {
+
+            &__logo {
+                height: 5vw;
+            }
+
+            &__nav {
+                display: none;
+            }
+        }
+
+        .content {
+            &__box {
+                text-align: center;
+
+                &__paragraph {
+                    font-size: .9rem;
+                    text-align: center;
+                }
+
+                &__btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .btn {
+                        margin: .5rem;
+                        max-width: 200px;
+                    }
+
+                    & a {
+                        padding: 0.6rem 1.2rem;
+                        width: 100%;
+                        font-size: 0.8rem;
+                        line-height: 20px;
+                    }
+                }
+            }
             
-            &__contact p, &__socials {
+            &__brand {
+                display: none;
+            }
+        }
+    }
+    
+    section {
+        &.x__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
+    
+        &.second__container {
+            grid-template-columns: repeat(1, 2fr);
+        }
+    }
+    
+    footer {
+        .info__content {
+            grid-template-areas:
+            'box-1'
+            'info__name'
+            'box-2';
+            grid-template-columns: 1fr;
+            
+            .info__name h2 {
                 text-align: center;
             }
+
+            .info__box-1 {
+                align-items: center;
+                
+                &__socials a{
+                    margin: 1rem;
+                    
+                    i {
+                        transform: scale(1.5);
+                    }
+                }
+
+                &__contact p, &__socials {
+                    text-align: center;
+                }
+            }
+
+            .info__box-2 {
+                form {
+                    grid-area: box-2;
+                    display: grid;
+                    grid-gap: 1.5rem;
+                    grid-template-areas:
+                    'fullname'
+                    'email'
+                    'tel'
+                    'topic'
+                    'message'
+                    'btn';
+                    grid-template-columns: 1fr;
+
+                    .field__btn {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .copyright {
+            margin-top: 4rem;
+            text-align: justify;
         }
     }
 }
